@@ -38,7 +38,7 @@ Notes of acronyms of RISC-V ISA.
 ## Examples,
 
 Typical combination for running Linux.
-:RV64GCsv39
+: RV64GCsv39
 
 Many of RISC-V microcontrollers which do not have float.
-:RV32IM
+: RV32IM
