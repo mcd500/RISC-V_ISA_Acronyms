@@ -41,6 +41,10 @@ Typical combination for running Linux.
 
   RV64GCsv39
 
-Many of RISC-V microcontrollers which do not have float.
+Many of single core RISC-V microcontrollers which do not have float.
 
   RV32IM
+
+Many of multi core RISC-V microcontrollers which do not have float.
+
+  RV32IMA
