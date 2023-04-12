@@ -1,6 +1,8 @@
 # RISC-V Acronyms
 
-## Register size (express in XLEN in spec)
+Notes of acronyms of RISC-V ISA.
+
+## Register size (expressed as XLEN in spec)
 RV32    32bit register length
 
 RV64    64bit register length
