@@ -44,14 +44,14 @@ Notes of acronyms of RISC-V ISA.
 A typical combination for running OS requires MMU.
 [For Linux capability]
 
-  RV64GCsv39
+  &emsp;RV64GCsv39
 
 Many of single core RISC-V microcontrollers do not have float.
 [For bare metal programming or RTOS]
 
-  RV32IM
+  &emsp;RV32IM
 
 Many of multi core RISC-V microcontrollers do not have float.
 [For bare metal programming or RTOS]
 
-  RV32IMA
+  &emsp;RV32IMA
