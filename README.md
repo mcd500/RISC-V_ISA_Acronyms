@@ -1,10 +1,10 @@
-# RISC-V Acronyms
+# RISC-V Cheat Sheet on ISA naming convention of Extension and Acronyms
 
 Notes of acronyms of RISC-V ISA.
 
 ## Register size (expressed as XLEN in spec)
 
-| | |
+| Base Name | Length Register (XLEN) |
 | --- | --- |
 | RV32   | 32bit register length |
 | RV64   | 64bit register length |
@@ -13,38 +13,45 @@ Notes of acronyms of RISC-V ISA.
 
 ## Supported ISA
 
-| | |
+| Extension Name | Detail Description
 | --- | --- |
-| I  | Has  ISA for only Addition and Subtraction only on Integer |
-| M  | Adds ISA for only Multiplication and Division only on Integer |
-| F  | Adds ISA for calculating Single-Precision Floating-Point (32bit) |
-| D  | Adds ISA for calculating Double-Precision Floating-Point (64bit) |
-| A  | Adds ISA for Atomic Instructions |
-| G  | Combining IMAFD above |
-| C  | Adds ISA for Compressed Instructions |
-| H  | Adds ISA for Hypervisor |
-| B  | Adds ISA for Bit Manipulation |
-| V  | Adds ISA for Vector Operations |
+| I  | Addition and Subtraction Arithmetic only on Integer (Mandatory) |
+| M  | Multiplication and Division Arithmetic only on Integer |
+| F  | FP32 (float) Single precision floating point arithmetic |
+| D  | FP64 (double) double precision floating point arithmetic |
+| A  | Atomic Instructions |
+| G  | Combination of IMAFD above |
+| C  | Adds 16bit length Compressed Instructions |
+| H  | Adds Hypervisor  |
+| B  | Adds Bit Manipulation |
+| P  | Adds Traditional SIMD instruction |
+| V  | Adds Vector Operations |
+| Q  | Adds Quad (128bit) precision floating point arithmetic |
 
 
 ## Supported MMU (number of virtual address bits, mandatory to run Linux)
 
-| | |
+| Virtual Memory (MMU) | Size of Virtual address |
 | --- | --- |
-| Sv32 | 32bit address bits |
-| Sv39 | 39bit address bits |
-| Sv48 | 48bit address bits |
+| none | No MMU |
+| Sv32 | 32bit address (4 GB) |
+| Sv39 | 39bit address (512 GB) |
+| Sv48 | 48bit address (256 TB) |
+| Sv57 | 57bit address (128 PB) |
 
 ## Examples,
 
-Typical combination for running Linux.
+A typical combination for running OS requires MMU.
+[For Linux capability]
 
   RV64GCsv39
 
-Many of single core RISC-V microcontrollers which do not have float.
+Many of single core RISC-V microcontrollers do not have float.
+[For bare metal programming or RTOS]
 
   RV32IM
 
-Many of multi core RISC-V microcontrollers which do not have float.
+Many of multi core RISC-V microcontrollers do not have float.
+[For bare metal programming or RTOS]
 
   RV32IMA
